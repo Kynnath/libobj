@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="89">
+<configurationDescriptor version="90">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="OBJ" projectFiles="true">
+        <itemPath>include/OBJ/Face.hpp</itemPath>
+        <itemPath>include/OBJ/Object.hpp</itemPath>
+        <itemPath>include/OBJ/Vertex.hpp</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,10 +17,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="src" displayName="src" projectFiles="true">
-        <itemPath>src/OBJReader.cpp</itemPath>
-        <itemPath>src/OBJReader.hpp</itemPath>
-      </logicalFolder>
+      <itemPath>src/Face.cpp</itemPath>
+      <itemPath>src/Object.cpp</itemPath>
+      <itemPath>src/Vertex.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +40,6 @@
   <confs>
     <conf name="Debug" type="3">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
@@ -44,19 +47,29 @@
       <compileType>
         <ccTool>
           <standard>8</standard>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
           <warningLevel>2</warningLevel>
         </ccTool>
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="src/OBJReader.cpp" ex="false" tool="1" flavor2="0">
+      <item path="include/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/OBJReader.hpp" ex="false" tool="3" flavor2="0">
+      <item path="include/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Face.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Vertex.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
@@ -66,10 +79,7 @@
           <developmentMode>5</developmentMode>
         </cTool>
         <ccTool>
-          <developmentMode>6</developmentMode>
-          <stripSymbols>true</stripSymbols>
-          <standard>8</standard>
-          <warningLevel>2</warningLevel>
+          <developmentMode>5</developmentMode>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -80,9 +90,17 @@
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="src/OBJReader.cpp" ex="false" tool="1" flavor2="0">
+      <item path="include/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/OBJReader.hpp" ex="false" tool="3" flavor2="0">
+      <item path="include/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Face.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Vertex.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
