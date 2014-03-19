@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Face.hpp
  * Author: juan.garibotti
  *
@@ -8,14 +8,16 @@
 #ifndef FACE_HPP
 #define	FACE_HPP
 
+#include <array>
+
 namespace obj
 {
-    
-    struct Face 
+
+    struct Face
     {
-        int m_coordinates[3];
-        int m_texture[3];
-        int m_normal[3];
+        std::array<int,3> m_coordinates;
+        std::array<int,3> m_texture;
+        std::array<int,3> m_normal;
     };
 
 }

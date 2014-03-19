@@ -116,22 +116,22 @@ namespace obj
 
                     for ( auto comp ( line.begin()+1 ), end ( line.end() ); comp != end; ++comp )
                     {
-                        int const firstSlash ( (*comp).find( '/', 0 ) );
+                        int const firstSlash ( (int)( (*comp).find( '/', 0 ) ) );
                         if ( firstSlash != (int)std::string::npos )
                         {
-                            coordinates[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( 0, firstSlash ) );
-                            int const secondSlash ( (*comp).find( '/', firstSlash+1 ) );
+                            coordinates[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( 0, (long long unsigned int)firstSlash ) );
+                            int const secondSlash ( (int)( (*comp).find( '/', (long long unsigned int)firstSlash+1 ) ) );
                             if ( secondSlash != (int)std::string::npos )
                             {
                                 if ( secondSlash - firstSlash > 1 )
                                 {
-                                    texture[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( firstSlash+1, secondSlash-firstSlash ) );
+                                    texture[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( (long long unsigned int)firstSlash+1, (long long unsigned int)( secondSlash-firstSlash ) ) );
                                 }
-                                normal[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( secondSlash+1 ) );
+                                normal[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( (long long unsigned int)secondSlash+1 ) );
                             }
                             else
                             {
-                                texture[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( firstSlash+1 ) );
+                                texture[ comp - line.begin() - 1 ] = std::stoi( (*comp).substr( (long long unsigned int)firstSlash+1 ) );
                             }
 
                         }

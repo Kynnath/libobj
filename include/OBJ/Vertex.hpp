@@ -1,31 +1,33 @@
-/* 
+/*
  * File:   newClass.hpp
  * Author: juan.garibotti
  *
  * Created on 24 de febrero de 2014, 18:13
  */
 
-#ifndef VERTEX_HPP
-#define	VERTEX_HPP
+#ifndef OBJ_VERTEX_HPP
+#define	OBJ_VERTEX_HPP
+
+#include <array>
 
 namespace obj
 {
     struct VertexCoordinates
     {
-        float m_data[4];
+        std::array<float,4> m_data;
     };
-    
+
     struct TextureCoordinates
     {
-        float m_data[3];      
+        std::array<float,3> m_data;
     };
-    
+
     struct Normal
     {
-        float m_data[3];
+        std::array<float,3> m_data;
     };
-    
+
 }
 
-#endif	/* VERTEX_HPP */
+#endif	/* OBJ_VERTEX_HPP */
 
