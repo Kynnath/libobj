@@ -36,11 +36,10 @@ namespace obj
 
     Object::Object( std::string const& i_filename )
     {
-        std::ifstream objFile ( i_filename );
-
         // Break file into tokens, separated by line
         std::vector< TokenList > lineTokens;
         {
+            std::ifstream objFile ( i_filename );
             std::string line;
 
             while ( std::getline( objFile, line ) )
