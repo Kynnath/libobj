@@ -4,11 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="OBJ" projectFiles="true">
-        <itemPath>include/OBJ/Face.hpp</itemPath>
-        <itemPath>include/OBJ/Object.hpp</itemPath>
-        <itemPath>include/OBJ/Vertex.hpp</itemPath>
-      </logicalFolder>
+      <itemPath>src/OBJ/Face.hpp</itemPath>
+      <itemPath>src/OBJ/Object.hpp</itemPath>
+      <itemPath>src/OBJ/Vertex.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -17,9 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>src/Face.cpp</itemPath>
-      <itemPath>src/Object.cpp</itemPath>
-      <itemPath>src/Vertex.cpp</itemPath>
+      <itemPath>src/OBJ/Face.cpp</itemPath>
+      <itemPath>src/OBJ/Object.cpp</itemPath>
+      <itemPath>src/OBJ/Vertex.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -33,9 +31,6 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>src</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="3">
@@ -47,26 +42,23 @@
       <compileType>
         <ccTool>
           <standard>8</standard>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
           <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wfloat-equal -Wundef -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wpadded -Wredundant-decls -Wunreachable-code</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="include/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Face.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="include/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Face.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/Object.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Vertex.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Vertex.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="3">
@@ -83,9 +75,6 @@
           <developmentMode>5</developmentMode>
           <stripSymbols>true</stripSymbols>
           <standard>8</standard>
-          <incDir>
-            <pElem>include</pElem>
-          </incDir>
           <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wfloat-equal -Wundef -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wpadded -Wredundant-decls -Wunreachable-code</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
@@ -98,17 +87,17 @@
         <archiverTool>
         </archiverTool>
       </compileType>
-      <item path="include/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Face.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="include/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Face.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="include/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
+      <item path="src/OBJ/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Face.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/Object.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Vertex.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Vertex.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/OBJ/Vertex.hpp" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

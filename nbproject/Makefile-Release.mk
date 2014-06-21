@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/src/Face.o \
-	${OBJECTDIR}/src/Object.o \
-	${OBJECTDIR}/src/Vertex.o
+	${OBJECTDIR}/src/OBJ/Face.o \
+	${OBJECTDIR}/src/OBJ/Object.o \
+	${OBJECTDIR}/src/OBJ/Vertex.o
 
 
 # C Compiler Flags
@@ -66,20 +66,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibobj.a: ${OBJECTFILES}
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibobj.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibobj.a
 
-${OBJECTDIR}/src/Face.o: src/Face.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/OBJ/Face.o: src/OBJ/Face.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Face.o src/Face.cpp
+	$(COMPILE.cc) -O2 -Wall -s -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Face.o src/OBJ/Face.cpp
 
-${OBJECTDIR}/src/Object.o: src/Object.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/OBJ/Object.o: src/OBJ/Object.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Object.o src/Object.cpp
+	$(COMPILE.cc) -O2 -Wall -s -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Object.o src/OBJ/Object.cpp
 
-${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/OBJ/Vertex.o: src/OBJ/Vertex.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
+	$(COMPILE.cc) -O2 -Wall -s -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Vertex.o src/OBJ/Vertex.cpp
 
 # Subprojects
 .build-subprojects:

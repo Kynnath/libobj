@@ -5,7 +5,7 @@
  * Created on 24 de febrero de 2014, 17:52
  */
 
-#include "OBJ/Object.hpp"
+#include "Object.hpp"
 
 #include <fstream>
 #include <sstream>
