@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <string>
+#include "GLT/Model.hpp"
 #include "Face.hpp"
 #include "Vertex.hpp"
 
@@ -25,6 +26,8 @@ namespace obj
         Object() = default;
         Object( std::string const& i_filename );
     };
+
+    glt::Model MakeModel(Object const& i_model);
 }
 
 #endif	/* OBJECT_HPP */

@@ -44,8 +44,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-m64 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y
-CXXFLAGS=-m64 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y
+CCFLAGS=-m64 -std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch -Wfloat-equal -Wundef -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code
+CXXFLAGS=-m64 -std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch -Wfloat-equal -Wundef -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -69,17 +69,17 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibobj.a: ${OBJECTFILES}
 ${OBJECTDIR}/src/OBJ/Face.o: src/OBJ/Face.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Face.o src/OBJ/Face.cpp
+	$(COMPILE.cc) -O2 -Werror -s -I../../../lib/glew-1.12.0/include -I../libgltools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Face.o src/OBJ/Face.cpp
 
 ${OBJECTDIR}/src/OBJ/Object.o: src/OBJ/Object.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Object.o src/OBJ/Object.cpp
+	$(COMPILE.cc) -O2 -Werror -s -I../../../lib/glew-1.12.0/include -I../libgltools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Object.o src/OBJ/Object.cpp
 
 ${OBJECTDIR}/src/OBJ/Vertex.o: src/OBJ/Vertex.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/OBJ
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Vertex.o src/OBJ/Vertex.cpp
+	$(COMPILE.cc) -O2 -Werror -s -I../../../lib/glew-1.12.0/include -I../libgltools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OBJ/Vertex.o src/OBJ/Vertex.cpp
 
 # Subprojects
 .build-subprojects:
